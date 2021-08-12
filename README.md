@@ -39,5 +39,5 @@ pip install baekjoon
   
   solvedac.get_exp(user) #EXP
   
-  solvedac.get_rank(user) #solved.ac 기준 랭크
+  solvedac.get_rank(user) #solved.ac 기준 랭크 (순위)
   ```

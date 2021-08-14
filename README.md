@@ -41,3 +41,7 @@ pip install baekjoon
   
   solvedac.get_rank(user) #solved.ac 기준 랭크 (순위)
   ```
+  
+  How to use [problems]
+  ```Python
+  from baekjoon import problem

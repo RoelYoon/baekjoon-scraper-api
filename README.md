@@ -45,3 +45,23 @@ pip install baekjoon
   How to use [problems]
   ```Python
   from baekjoon import problem
+  
+  q_num = 1000 #정수와 문자열 상관없음
+  
+  user = "smartwe"
+  
+  problem.get_question(q_num) #문제를 가져옴
+  
+  problem.get_input(q_num) #문제의 입력 조건을 가져옴
+  
+  problem.get_output(q_num) #문제의 출력 조건을 가져옴
+  
+  problem.get_sample_input(q_num) #문제의 예제 입력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는<U>)
+  
+  problem.get_sample_output(q_num) #문제의 예제 출력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는<U>)
+  
+  problem.get_correct_rate(q_num) #문제의 정답 비율을 가져옴
+  
+  problem.get_time_limit(q_num) #문제의 시간 제한을 가져옴
+  
+  problem.get_memory_limit(q_num) #문제의 메모리 제한을 가져옴

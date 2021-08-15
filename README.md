@@ -56,9 +56,9 @@ pip install baekjoon
   
   problem.get_output(q_num) #문제의 출력 조건을 가져옴
   
-  problem.get_sample_input(q_num) #문제의 예제 입력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는<U>)
+  problem.get_sample_input(q_num) #문제의 예제 입력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는</U>)
   
-  problem.get_sample_output(q_num) #문제의 예제 출력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는<U>)
+  problem.get_sample_output(q_num) #문제의 예제 출력을 가져옴 (테스트케이스 1만 가능 <U>현재까지는</U>)
   
   problem.get_correct_rate(q_num) #문제의 정답 비율을 가져옴
   
@@ -66,4 +66,4 @@ pip install baekjoon
   
   problem.get_memory_limit(q_num) #문제의 메모리 제한을 가져옴
   
-  problem.get_random_question() #랜덤 문제를 가져옴 <U>채첨 못하는 문제도 있음<U>
+  problem.get_random_question() #랜덤 문제를 가져옴 <U>채첨 못하는 문제도 있음</U>

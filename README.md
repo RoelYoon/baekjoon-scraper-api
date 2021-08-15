@@ -65,3 +65,5 @@ pip install baekjoon
   problem.get_time_limit(q_num) #문제의 시간 제한을 가져옴
   
   problem.get_memory_limit(q_num) #문제의 메모리 제한을 가져옴
+  
+  problem.get_random_question() #랜덤 문제를 가져옴 <U>채첨 못하는 문제도 있음<U>

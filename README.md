@@ -1,4 +1,5 @@
-# baekjoon-api
+# baekjoon-scrapper-api
+This is a fork of smartwe's baekjoon-api. The original api is currently broken because it does not pass baekjoon's bot ddetection.
 ## solved.ac & acmicpc.net api
   
 ### installing requirements

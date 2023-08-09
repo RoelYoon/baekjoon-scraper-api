@@ -2,17 +2,17 @@ from setuptools import setup, find_packages
 from os import path
 
 
-setup(name='baekjoon', # 패키지 명
+setup(name='baekjoon-scraper', # 패키지 명
 
-version='1.0.8',
+version='1.0.0',
 
-description='unofficial boj api',
+description='A fork of smartwe\'s baekjoon api with optional argument fields for avoiding scraping detection' ,
 
-author='smartwe',
+author='RoelYoon',
 
-author_email='sparklingwee@naver.com',
+author_email='roelyoon2@gmail.com',
 
-url='https://github.com/smartwe/baekjoon-api',
+url='https://github.com/RoelYoon/CP-Club-Website-And-API.git',
 
 license='MIT', # MIT에서 정한 표준 라이센스 따른다
 

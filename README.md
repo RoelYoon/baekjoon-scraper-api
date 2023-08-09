@@ -68,3 +68,18 @@ pip install baekjoon
   problem.get_memory_limit(q_num) #문제의 메모리 제한을 가져옴
   
   problem.get_random_question() #랜덤 문제를 가져옴 채첨 못하는 문제도 있음 (쩝)
+  ```
+  
+  Optional parameters for scraping to avoid Baekjoon's bot detection
+  (The parameters work on every function that uses requests.get())
+  ```Python
+    #Template: <module>.<api>(user_name,headers,params,proxies)
+    #Passing in {} for any any argument after user_name uses default value from requests.get()
+    #Example:
+    from baekjoon import boj
+
+    user = "smartwe"
+
+    boj.get_status_message(user,{'User-Agent': '<user agent>'},{'somekey': 'somevalue', 'somekey2': 'somevalue2'},{"http":"http://0.0.0.0:80","https":"https://0.0.0.0:422","ftp":"ftp://0.0.0.0:21"}) 
+  ```
+  Currently, just passing a believable user-agent bypasses Baekjoon's detection, but you may need to implement fancier tricks such as ID address rotation when using this API on larger scales.

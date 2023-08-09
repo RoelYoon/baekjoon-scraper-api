@@ -6,6 +6,6 @@ Home-page: https://github.com/RoelYoon/CP-Club-Website-And-API
 Author: RoelYoon
 Author-email: roelyoon2@gmail.com
 License: MIT
-Description: UNKNOWN
+Description: An unofficial API for Baekjoon Online Judge that retrieves data by scraping the website. This is a fork of smartwe's baekjoon api with optional argument fields for avoiding scraping detection. Read at https://github.com/RoelYoon/CP-Club-Website-And-API.git to learn how to use this package.  
 Platform: UNKNOWN
 Requires-Python: >=3

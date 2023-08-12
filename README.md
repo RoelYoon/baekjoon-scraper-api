@@ -3,7 +3,7 @@ This is a fork of smartwe's baekjoon-api. The original api is currently broken b
 
 ## TODO
 - [x] Fix solvedac scraper (html was reformatted)
-- [x] Fix problem scraper (html was reformatted)
+- [x] Fix boj scraper (html was reformatted)
 
 ## solved.ac & acmicpc.net api
   

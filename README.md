@@ -18,8 +18,6 @@ pip install baekjoon
   
   user = "smartwe"
   
-  boj.get_status_message(user) #사용자 이름
-  
   boj.get_rank(user) #백준 랭크(순위)
   
   boj.get_correct_qs(user) #맞은 문제들
@@ -30,7 +28,7 @@ pip install baekjoon
   
   boj.get_unsolved_q(user) #시도했지만 맞지 못한 문제의 개수
   
-  boj.get_submit_time(user) #제출 개수
+  boj.get_submissions(user) #제출 개수
   ```
   
   How to use [solved.ac]
@@ -43,7 +41,7 @@ pip install baekjoon
   
   solvedac.get_ac_rating(user) #AC RATING
   
-  solvedac.get_exp(user) #EXP
+  solvedac.get_exp(user) #EXP (currently unavailable)
   
   solvedac.get_rank(user) #solved.ac 기준 랭크 (순위)
   ```
@@ -85,6 +83,6 @@ pip install baekjoon
 
     user = "smartwe"
 
-    boj.get_status_message(user,{'User-Agent': '<user agent>'},{'somekey': 'somevalue', 'somekey2': 'somevalue2'},{"http":"http://0.0.0.0:80","https":"https://0.0.0.0:422","ftp":"ftp://0.0.0.0:21"}) 
+    boj.get_stats(user,{'User-Agent': '<user agent>'},{'somekey': 'somevalue', 'somekey2': 'somevalue2'},{"http":"http://0.0.0.0:80","https":"https://0.0.0.0:422","ftp":"ftp://0.0.0.0:21"}) 
   ```
   Currently, just passing a believable user-agent bypasses Baekjoon's detection, but you may need to implement fancier tricks such as ID address rotation when using this API on larger scales.

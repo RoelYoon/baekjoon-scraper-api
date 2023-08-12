@@ -1,12 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from . import args
-
-def download(url, file_name, headers={}, params={}, proxies={}):
-    with open(file_name, "wb") as file:   # open in binary mode
-        response = requests.get(**args.requestArgs(url,headers,params,proxies))  # get request
-        file.write(response.content) 
-
+        
 def tierfinder(word):
     if word.find('tier/1.svg') != -1:
         return "브론즈 5"
@@ -84,15 +79,8 @@ def get_ac_rating(user_name, headers={}, params={}, proxies={}):
     url = 'https://solved.ac/profile/' + user_name
     response = requests.get(**args.requestArgs(url,headers,params,proxies))
     soup = BeautifulSoup(response.text, 'html.parser')
-    rating = soup.select_one("#u-result-6").text
+    rating = soup.select_one("#__next > div.css-axxp2y > div.css-1948bce > div.css-zi8sic > div.css-5vptc8 > div:nth-child(1) > div.css-1midmz7").text
     return rating
-
-def get_exp(user_name, headers={}, params={}, proxies={}):
-    url = 'https://solved.ac/profile/' + user_name
-    response = requests.get(**args.requestArgs(url,headers,params,proxies))
-    soup = BeautifulSoup(response.text, 'html.parser')
-    exp = soup.select_one("#__next > div.ProfileHeaderCard__ProfileHeaderCardWrapper-sc-1ds1sbv-0.fhLOCV > div.ProfileHeaderCardstyles__ProfileHeaderCardTop-wboshd-0.iothCP > div > div > div:nth-child(4) > div.ProfileHeaderCardstyles__UserNumberContainer-wboshd-4.jOszzV > span:nth-child(1) > b").text
-    return exp
 
 def get_rank(user_name, headers={}, params={}, proxies={}):
     url = 'https://solved.ac/profile/' + user_name
@@ -100,11 +88,3 @@ def get_rank(user_name, headers={}, params={}, proxies={}):
     soup = BeautifulSoup(response.text, 'html.parser')
     rank = soup.select_one("#__next > div.ProfileHeaderCard__ProfileHeaderCardWrapper-sc-1ds1sbv-0.fhLOCV > div.ProfileHeaderCardstyles__ProfileHeaderCardTop-wboshd-0.iothCP > div > div > div:nth-child(4) > div.ProfileHeaderCardstyles__UserNumberContainer-wboshd-4.jOszzV > span:nth-child(2) > b").text
     return rank
-
-def get_rival_amount(user_name, headers={}, params={}, proxies={}):
-    url = 'https://solved.ac/profile/' + user_name
-    response = requests.get(**args.requestArgs(url,headers,params,proxies))
-    soup = BeautifulSoup(response.text, 'html.parser')
-    rival_amount = soup.select_one("#__next > div.ProfileHeaderCard__ProfileHeaderCardWrapper-sc-1ds1sbv-0.fhLOCV > div.ProfileHeaderCardstyles__ProfileHeaderCardTop-wboshd-0.iothCP > div > div > div:nth-child(4) > div.ProfileHeaderCardstyles__UserNumberContainer-wboshd-4.jOszzV > span:nth-child(5) > b").text
-    return rival_amount
-

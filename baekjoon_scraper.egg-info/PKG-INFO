@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: baekjoon-scraper
-Version: 1.0.1
+Version: 1.0.2
 Summary: A fork of smartwe's baekjoon api with optional argument fields for avoiding scraping detection
 Home-page: https://github.com/RoelYoon/baekjoon-scraper-api.git
 Author: RoelYoon

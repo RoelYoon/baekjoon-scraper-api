@@ -2,8 +2,8 @@
 This is a fork of smartwe's baekjoon-api. The original api is currently broken because it does not pass baekjoon's bot detection.
 
 ## TODO
-- [ X ] Fix solvedac scraper (html was reformatted)
-- [ X ] Fix problem scraper (html was reformatted)
+- [ x ] Fix solvedac scraper (html was reformatted)
+- [ x ] Fix problem scraper (html was reformatted)
 
 ## solved.ac & acmicpc.net api
   

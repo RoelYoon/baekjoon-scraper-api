@@ -4,7 +4,7 @@ from os import path
 
 setup(name='baekjoon-scraper', # 패키지 명
 
-version='1.0.1',
+version='1.0.2',
 
 description='A fork of smartwe\'s baekjoon api with optional argument fields for avoiding scraping detection' ,
 

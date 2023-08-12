@@ -1,18 +1,18 @@
-# baekjoon-scrapper-api
-This is a fork of smartwe's baekjoon-api. The original api is currently broken because it does not pass baekjoon's bot detection.
+# baekjoon-scraper-api
+This is a fork of smartwe's baekjoon-api. The original baekjoon-api is currently broken because it does not pass baekjoon's bot detection and contains obsolete paths in the scrapers.
 
 ## TODO
 - [x] Fix solvedac scraper (html was reformatted)
 - [x] Fix boj scraper (html was reformatted)
 
-## solved.ac & acmicpc.net api
+## Using The API
   
-### installing requirements
+### Install The Package
 ```
 pip install baekjoon
 ```
   
-  How to use [boj]
+  How to use the [boj] module
   ```Python
   from baekjoon import boj
   
@@ -31,7 +31,7 @@ pip install baekjoon
   boj.get_submissions(user) #제출 개수
   ```
   
-  How to use [solved.ac]
+  How to use the [solvedac] module 
   ```Python
   from baekjoon import solvedac
   
@@ -46,7 +46,7 @@ pip install baekjoon
   solvedac.get_rank(user) #solved.ac 기준 랭크 (순위)
   ```
   
-  How to use [problems]
+  How to use the [problem] module
   ```Python
   from baekjoon import problem
   

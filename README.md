@@ -12,7 +12,7 @@ This is a fork of smartwe's baekjoon-api. The original baekjoon-api is currently
 pip install baekjoon
 ```
   
-  How to use the [boj] module
+  How to use the `boj` module
   ```Python
   from baekjoon import boj
   
@@ -31,7 +31,7 @@ pip install baekjoon
   boj.get_submissions(user) #제출 개수
   ```
   
-  How to use the [solvedac] module 
+  How to use the `solvedac` module 
   ```Python
   from baekjoon import solvedac
   
@@ -46,7 +46,7 @@ pip install baekjoon
   solvedac.get_rank(user) #solved.ac 기준 랭크 (순위)
   ```
   
-  How to use the [problem] module
+  How to use the `problem` module
   ```Python
   from baekjoon import problem
   

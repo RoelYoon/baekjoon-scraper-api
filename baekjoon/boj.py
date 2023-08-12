@@ -2,12 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from . import args
 
-def get_status_message(user_name,headers={},params={},proxies={}):
-    url = 'https://www.acmicpc.net/user/' + user_name
-    response = requests.get(**args.requestArgs(url,headers,params,proxies))
-    soup = BeautifulSoup(response.text, 'html.parser')
-    status = soup.find('blockquote' , {'class' : 'no-mathjax'}).text
-    return status
 def get_rank(user_name, headers={}, params={}, proxies={}):
     url = 'https://www.acmicpc.net/user/' + user_name
     response = requests.get(**args.requestArgs(url,headers,params,proxies))
@@ -19,7 +13,7 @@ def get_correct_qs(user_name, headers={}, params={}, proxies={}):
     url = 'https://www.acmicpc.net/user/' + user_name
     response = requests.get(**args.requestArgs(url,headers,params,proxies))
     soup = BeautifulSoup(response.text, 'html.parser')
-    correct_qs = soup.select_one("body > div.wrapper > div.container.content > div.row > div:nth-child(2) > div > div.col-md-9 > div:nth-child(1) > div.panel-body").text
+    correct_qs = soup.select_one("body > div.wrapper > div.container.content > div.row > div:nth-child(2) > div > div.col-md-9 > div:nth-child(2) > div.panel-body").text
     return correct_qs
 
 def get_correct_q(user_name, headers={}, params={}, proxies={}):
@@ -33,7 +27,7 @@ def get_unsolved_qs(user_name, headers={}, params={}, proxies={}):
     url = 'https://www.acmicpc.net/user/' + user_name
     response = requests.get(**args.requestArgs(url,headers,params,proxies))
     soup = BeautifulSoup(response.text, 'html.parser')
-    wrong_qs = soup.select_one("body > div.wrapper > div.container.content > div.row > div:nth-child(2) > div > div.col-md-9 > div:nth-child(2) > div.panel-body").text
+    wrong_qs = soup.select_one("body > div.wrapper > div.container.content > div.row > div:nth-child(2) > div.row > div.col-md-9 > div:nth-child(3) > div.panel-body").text
     return wrong_qs
 
 def get_unsolved_q(user_name, headers={}, params={}, proxies={}):
@@ -43,7 +37,7 @@ def get_unsolved_q(user_name, headers={}, params={}, proxies={}):
     wrong_q = soup.select_one("#u-failed").text
     return wrong_q
 
-def get_submit_time(user_name, headers={}, params={}, proxies={}):
+def get_submissions(user_name, headers={}, params={}, proxies={}):
     url = 'https://www.acmicpc.net/user/' + user_name
     response = requests.get(**args.requestArgs(url,headers,params,proxies))
     soup = BeautifulSoup(response.text, 'html.parser')

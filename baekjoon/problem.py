@@ -60,6 +60,6 @@ def get_memory_limit(number, headers={}, params={}, proxies={}):
     return memory_cut.text
 
 def get_random_question():
-    url = "https://www.acmicpc.net/problem/" + random.randint(1000, 22934)
+    url = "https://www.acmicpc.net/problem/" + str(random.randint(1000, 28677))
     return url
 

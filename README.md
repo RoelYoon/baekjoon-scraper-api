@@ -85,4 +85,4 @@ pip install baekjoon
 
     boj.get_stats(user,{'User-Agent': '<user agent>'},{'somekey': 'somevalue', 'somekey2': 'somevalue2'},{"http":"http://0.0.0.0:80","https":"https://0.0.0.0:422","ftp":"ftp://0.0.0.0:21"}) 
   ```
-  Currently, just passing a believable user-agent bypasses Baekjoon's detection, but you may need to implement fancier tricks such as ID address rotation when using this API on larger scales.
+  Currently, just passing a template user-agent bypasses Baekjoon's detection, but you may need to implement fancier tricks such as ID address rotation when using this API on larger scales.
